@@ -1,0 +1,1176 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<title>Nejla Henna Organizasyon | Hint Kına & Düğün Organizasyonu</title>
+
+<meta name="description" content="Nejla Henna Organizasyon - Hint kınası, glitter, yüz taşı ve özel organizasyon hizmetleri. Saatlik veya gece boyunca profesyonel hizmet.">
+
+<style>
+
+:root{
+  --bg:#0d0b0c;
+  --card:#171214;
+  --gold:#d7a84d;
+  --gold2:#f2d18a;
+  --text:#fffaf0;
+  --muted:#b9afb0;
+  --line:rgba(255,255,255,.09);
+  --green:#25d366;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Segoe UI,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:20;
+  background:rgba(13,11,12,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  height:74px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:800;
+  color:var(--gold2);
+}
+
+.logo span{
+  display:block;
+  font-size:10px;
+  letter-spacing:3px;
+  color:#aaa;
+  text-transform:uppercase;
+}
+
+nav{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+
+nav a{
+  font-size:14px;
+  color:#ddd;
+}
+
+nav a:hover{
+  color:var(--gold2);
+}
+
+/* BUTTON */
+
+.navbtn,
+.btn{
+  background:linear-gradient(135deg,#d6a345,#f0ce82);
+  color:#18110a;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:800;
+  border:0;
+  cursor:pointer;
+}
+
+.btn.dark{
+  background:rgba(255,255,255,.08);
+  color:white;
+  border:1px solid rgba(255,255,255,.18);
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.36)),
+  url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85')
+  center/cover;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+  radial-gradient(
+    circle at 70% 50%,
+    transparent,
+    rgba(0,0,0,.55)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding-top:70px;
+  max-width:730px;
+}
+
+.badge{
+  display:inline-block;
+  border:1px solid rgba(242,209,138,.45);
+  color:var(--gold2);
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:12px;
+  letter-spacing:1.5px;
+  margin-bottom:22px;
+}
+
+h1{
+  font-size:clamp(42px,7vw,78px);
+  line-height:1.02;
+  margin-bottom:22px;
+}
+
+h1 em{
+  font-style:normal;
+  color:var(--gold2);
+}
+
+.hero p{
+  font-size:18px;
+  color:#ddd;
+  max-width:620px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* SECTIONS */
+
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 45px;
+}
+
+.section-head small{
+  color:var(--gold2);
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section-head h2{
+  font-size:38px;
+  margin:8px 0;
+}
+
+.section-head p{
+  color:var(--muted);
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:linear-gradient(145deg,#1b1517,#120f10);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:28px;
+}
+
+.icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  margin-bottom:8px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.price{
+  color:var(--gold2);
+  font-size:23px;
+  font-weight:800;
+  margin:15px 0;
+}
+
+/* GALLERY */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.gallery img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:16px;
+  display:block;
+}
+
+/* YOUTUBE */
+
+.youtube-video{
+  margin-top:50px;
+}
+
+.video-wrapper{
+  position:relative;
+  width:100%;
+  max-width:1000px;
+  margin:0 auto;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:#000;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.video-wrapper iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* DARK SECTION */
+
+.dark-section{
+  background:#110e0f;
+}
+
+/* STEPS */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.step{
+  padding:25px;
+  border-left:2px solid var(--gold);
+}
+
+.step b{
+  color:var(--gold2);
+  font-size:13px;
+}
+
+.step h3{
+  margin:8px 0;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* SOCIAL */
+
+.socials{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.social{
+  padding:14px 22px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#171315;
+}
+
+.social:hover{
+  border-color:var(--gold);
+  color:var(--gold2);
+}
+..social i{font-size:22px;margin-right:8px}
+
+.social:nth-child(1) i{color:#E1306C} /* Instagram */
+.social:nth-child(2) i{color:#FF0000} /* YouTube */
+.social:nth-child(3) i{color:#25D366} /* WhatsApp */
+
+.social:nth-child(1):hover{
+  border-color:#E1306C;
+  color:#E1306C;
+}
+
+.social:nth-child(2):hover{
+  border-color:#FF0000;
+  color:#FF0000;
+}
+
+.social:nth-child(3):hover{
+  border-color:#25D366;
+  color:#25D366;
+}
+
+/* BOOKING */
+
+.booking{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:start;
+}
+
+.info h2{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+.info p{
+  color:var(--muted);
+}
+
+.contact-list{
+  margin-top:25px;
+  display:grid;
+  gap:12px;
+}
+
+.contact-list div{
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:#151112;
+}
+
+/* FORM */
+
+form{
+  background:#171315;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:25px;
+}
+
+label{
+  display:block;
+  font-size:12px;
+  color:#aaa;
+  margin:0 0 6px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  background:#0e0c0d;
+  color:white;
+  border:1px solid #30282a;
+  border-radius:10px;
+  padding:13px;
+  margin-bottom:14px;
+  outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--gold);
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+form .btn{
+  width:100%;
+  font-size:15px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:#777;
+  font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:30;
+
+  width:60px;
+  height:60px;
+
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  background:var(--green);
+  color:white;
+
+  font-size:29px;
+
+  box-shadow:
+  0 10px 30px rgba(37,211,102,.3);
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  nav{
+    display:none;
+  }
+
+  .grid,
+  .steps,
+  .booking{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery img{
+    height:190px;
+  }
+
+  .hero{
+    min-height:92vh;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .section-head h2{
+    font-size:30px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a class="logo" href="#">
+  NEJLA HENNA
+  <span>ORGANİZASYON</span>
+</a>
+
+<nav>
+
+<a href="#hizmetler">Hizmetler</a>
+
+<a href="#paketler">Paketler</a>
+
+<a href="#galeri">Galeri</a>
+
+<a href="#randevu">Randevu</a>
+
+<a
+class="navbtn"
+href="https://wa.me/905342903892"
+target="_blank">
+WhatsApp
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="badge">
+HİNT KINASI • YÜZ TAŞI • GLITTER •
+</div>
+
+<h1>
+Gecenize <em>Hint dokunuşu</em> katalım.
+</h1>
+
+<p>
+
+Profesyonel ekip, geleneksel Hint kınası,
+ışıltılı glitter uygulamaları,
+zarif yüz taşları ve unutulmaz bir atmosfer.
+
+Saatlik veya gece boyunca organizasyon seçenekleriyle
+özel gününüzü baştan sona sizin için tasarlıyoruz.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="#randevu">
+Randevu Oluştur
+</a>
+
+<a class="btn dark" href="#hizmetler">
+Hizmetleri Gör
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HİZMETLER -->
+
+<section id="hizmetler">
+
+<div class="container">
+
+<div class="section-head">
+
+<small>Hizmetlerimiz</small>
+
+<h2>
+İhtiyacınıza göre organizasyon
+</h2>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card"
+style="border-color:rgba(242,209,138,.45)">
+
+<div class="icon">✨</div>
+
+<h3>Glitter</h3>
+
+<p>
+Kına ve özel organizasyonlarınıza
+ışıltı katacak profesyonel
+glitter uygulamaları.
+</p>
+
+<div class="price">
+Fiyat için ulaşın
+</div>
+
+</div>
+
+
+<div class="card"
+style="border-color:rgba(242,209,138,.45)">
+
+<div class="icon">💎</div>
+
+<h3>Yüz Taşı</h3>
+
+<p>
+Yüzünüze ve konseptinize uygun
+zarif ve dikkat çekici
+yüz taşı uygulamaları.
+</p>
+
+<div class="price">
+Fiyat için ulaşın
+</div>
+
+</div>
+
+
+<div class="card"
+style="border-color:rgba(242,209,138,.45)">
+
+<div class="icon">🪷</div>
+
+<h3>Hint Kınası</h3>
+
+<p>
+Geleneksel Hint kınası tasarımlarıyla
+özel gecenize şık ve özgün
+bir dokunuş.
+</p>
+
+<div class="price">
+Fiyat için ulaşın
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAKETLER -->
+
+<section id="paketler" class="dark-section">
+
+<div class="container">
+
+<div class="section-head">
+
+<small>Paketler</small>
+
+<h2>
+Size uygun paketi seçin
+</h2>
+
+<p>
+Organizasyon süresine ve ihtiyaçlarınıza göre
+size özel paket oluşturuyoruz.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card"
+style="border-color:rgba(242,209,138,.45)">
+
+<h3>
+2 Saatlik Paket
+</h3>
+
+<div class="price">
+Fiyat için ulaşın
+</div>
+
+<p>
+
+• Glitter uygulaması<br>
+• Yüz taşı uygulaması<br>
+• Hint kınası uygulaması<br>
+• Profesyonel ekip
+
+</p>
+
+</div>
+
+
+<div class="card"
+style="border-color:rgba(242,209,138,.45)">
+
+<h3>
+4 Saatlik Paket
+</h3>
+
+<div class="price">
+Fiyat için ulaşın
+</div>
+
+<p>
+
+• Glitter uygulaması<br>
+• Yüz taşı uygulaması<br>
+• Hint kınası uygulaması<br>
+• Profesyonel ekip<br>
+• Organizasyon boyunca destek
+
+</p>
+
+</div>
+
+
+<div class="card"
+style="border-color:rgba(242,209,138,.45)">
+
+<h3>
+Gece Boyunca
+</h3>
+
+<div class="price">
+Fiyat için ulaşın
+</div>
+
+<p>
+
+• Glitter uygulaması<br>
+• Yüz taşı uygulaması<br>
+• Hint kınası uygulaması<br>
+• Profesyonel ekip<br>
+• Gece boyunca kesintisiz hizmet
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALERİ -->
+
+<section id="galeri">
+
+<div class="container">
+
+<div class="section-head">
+
+<small>Galeri</small>
+
+<h2>
+Referans ve Çalışmalar
+</h2>
+
+</div>
+
+
+<div class="gallery">
+
+<img
+src="https://images.unsplash.com/photo-1615980522878-a52f5fc93bd7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RkFDRSUyMFNUT05FJTIwbWFrdXB8ZW58MHx8MHx8fDA%3D"
+alt="Yüz taşı uygulaması">
+
+<img
+src="https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SEVOTkF8ZW58MHx8MHx8fDA%3D"
+alt="Hint kınası">
+
+<img
+src="https://plus.unsplash.com/premium_photo-1677110759074-e1d62f948f30?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R0xJVFRFUiUyMGZhY2V8ZW58MHx8MHx8fDA%3D"
+alt="Glitter uygulaması">
+
+<img
+src="https://images.unsplash.com/photo-1628834556809-fd4d8acad67c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEhFTk5BfGVufDB8fDB8fHww"
+alt="Henna uygulaması">
+
+</div>
+
+
+<!-- RÖPORTAJ -->
+
+<div class="youtube-video">
+
+<div class="section-head"
+style="margin-top:60px;">
+
+<small>Röportaj</small>
+
+<h2>
+Bizi Daha Yakından Tanıyın
+</h2>
+
+<p>
+Nejla Henna Organizasyon hakkında
+daha fazlasını videomuzda keşfedin.
+</p>
+
+</div>
+
+
+<div class="video-wrapper">
+
+<iframe
+
+src="https://www.youtube-nocookie.com/embed/K8e9Rw1eYxU"
+
+title="Nejla Henna Organizasyon Röportaj"
+
+frameborder="0"
+
+referrerpolicy="strict-origin-when-cross-origin"
+
+allow="
+accelerometer;
+autoplay;
+clipboard-write;
+encrypted-media;
+gyroscope;
+picture-in-picture;
+web-share
+"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+
+<div style="
+text-align:center;
+margin-top:22px;
+">
+
+<a
+class="btn"
+href="https://www.youtube.com/@hint_kinacisi_nejla9380/videos"
+target="_blank">
+
+▶ YouTube'da Tüm Videoları Gör
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NASIL ÇALIŞIYORUZ -->
+
+<section class="dark-section">
+
+<div class="container">
+
+<div class="section-head">
+
+<small>Nasıl Çalışıyoruz?</small>
+
+<h2>
+3 adımda randevu
+</h2>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<b>01</b>
+
+<h3>
+Tarih & Hizmet
+</h3>
+
+<p>
+Organizasyon tarihinizi ve
+istediğiniz hizmeti belirleyin.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<b>02</b>
+
+<h3>
+WhatsApp Görüşmesi
+</h3>
+
+<p>
+Formdaki bilgiler otomatik olarak
+WhatsApp mesajına dönüşür.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<b>03</b>
+
+<h3>
+Organizasyon
+</h3>
+
+<p>
+Detayları netleştirip ekibimizle
+unutulmaz gecenizi gerçekleştirelim.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOSYAL MEDYA -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<small>Sosyal Medya</small>
+
+<h2>
+Bizi takip edin
+</h2>
+
+<p>
+Çalışmalarımızı ve yeni videolarımızı
+sosyal medya hesaplarımızdan takip edebilirsiniz.
+</p>
+
+</div>
+
+
+<div class="socials">
+
+<a class="social" href="https://www.instagram.com/hintkinacisinejla/" target="_blank">
+<i class="fa-brands fa-instagram"></i> Instagram
+</a>
+
+<a class="social" href="https://www.youtube.com/@hint_kinacisi_nejla9380/videos" target="_blank">
+<i class="fa-brands fa-youtube"></i> YouTube
+</a>
+
+<a class="social" href="https://wa.me/905342903892" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RANDEVU -->
+
+<section id="randevu"
+class="dark-section">
+
+<div class="container booking">
+
+
+<div class="info">
+
+<small
+style="color:var(--gold2);letter-spacing:2px">
+
+RANDEVU
+
+</small>
+
+
+<h2>
+Gecenizi birlikte planlayalım.
+</h2>
+
+
+<p>
+
+Formu doldurun.
+Bilgileriniz WhatsApp'ta hazır mesaj olarak açılacak.
+
+Gönder butonuna bastığınızda bizimle doğrudan
+iletişime geçebilirsiniz.
+
+</p>
+
+
+<div class="contact-list">
+
+
+<div>
+📞 <strong>Nejla Parlak:</strong>
++90 534 290 38 92
+</div>
+
+
+<div>
+📍 <strong>Hizmet Bölgesi:</strong>
+İstanbul ve çevre iller
+</div>
+
+
+<div>
+🕐 <strong>Çalışma:</strong>
+7 gün / randevu ile
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<form id="bookingForm"style="border-color:rgba(242,209,138,.45)">
+
+<label>Ad Soyad</label>
+<input id="name" required placeholder="Adınız Soyadınız">
+
+<label>Telefon</label>
+<input id="phone" placeholder="05xx xxx xx xx">
+
+<label>Organizasyon Tarihi</label>
+<input id="date" type="date">
+
+<label>Saat</label>
+<input id="time" type="time">
+
+<label>Not / Mekân / Kişi Sayısı</label>
+<textarea id="note" placeholder="Örn: 150 kişi, Bahçeşehir, açık hava..."></textarea>
+
+<button class="btn" type="submit">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Randevu Al
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+© 2026 Nejla Henna Kına Organizasyon
+• Tüm hakları saklıdır.
+
+</div>
+
+</footer>
+
+
+<a
+class="whatsapp"
+href="https://wa.me/905342903892"
+target="_blank"
+aria-label="WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+
+
+
+<script>
+const WHATSAPP = "905342903892";
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const note = document.getElementById("note").value;
+
+    const message = `Merhaba, randevu almak istiyorum.
+
+Ad Soyad: ${name}
+Telefon: ${phone}
+Organizasyon Tarihi: ${date}
+Saat: ${time}
+Not / Mekân / Kişi Sayısı: ${note || "Belirtilmedi"}`;
+
+    window.open(
+        `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
+        "_blank"
+    );
+});
+
+
+</script>
+
+
+</body>
+</html>
+
