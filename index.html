@@ -1263,69 +1263,58 @@ Hizmetleri Gör
 <div class="packages-grid">
 
 
-  <!-- MİNİ PAKET -->
+<!-- MİNİ PAKET -->
 
-  <div class="package-card featured-package">
+<div class="package-card featured-package">
 
-    <div class="popular-badge">
-      ✨ EN ÇOK TERCİH EDİLEN
+  <div class="popular-badge">
+    ✨ EN ÇOK TERCİH EDİLEN
+  </div>
+
+  <div class="package-icon">
+    💎
+  </div>
+
+  <span class="package-type">
+    MİNİ PAKET
+  </span>
+
+  <h3>
+    Gelin & Nedimeleri
+  </h3>
+
+  <p class="package-description">
+    Gelinimiz ve en yakın 10 nedimesine özel
+    Glitter ve Hint Kınası uygulaması.
+  </p>
+
+
+  <div class="package-features">
+
+    <div class="package-feature">
+      <span>✓</span>
+      <p>Gelin ve 10 nedime için özel Glitter tasarımı</p>
     </div>
 
-    <div class="package-icon">
-      💎
+    <div class="package-feature">
+      <span>✓</span>
+      <p>Hint Kınası uygulaması</p>
     </div>
-
-    <span class="package-type">
-      MİNİ PAKET
-    </span>
-
-    <h3>
-      Gelin & Nedimeleri
-    </h3>
-
-    <p class="package-description">
-      Gelin ve nedimelerine özel,
-      zarif ve ışıltılı dokunuşlarla
-      unutulmaz bir görünüm.
-    </p>
-
-
-    <div class="package-time">
-      ⏱️ <strong>2 Saat</strong>
-    </div>
-
-
-    <div class="package-features">
-
-      <div>
-        <span>✓</span>
-        Özel Yüz Taşı Uygulaması
-      </div>
-
-      <div>
-        <span>✓</span>
-        Hint Kınası Uygulaması
-      </div>
-
-      <div>
-        <span>✓</span>
-        Gelin & Nedimelerine Özel Tasarım
-      </div>
-
-    </div>
-
-
-    <div class="package-price">
-      <small>Başlangıç fiyatı</small>
-      <strong>3.000 TL</strong>
-    </div>
-
-
-    <a href="#iletisim" class="package-button">
-      Paketi İncele →
-    </a>
 
   </div>
+
+
+  <div class="package-info">
+    <span class="info-icon">✨</span>
+
+    <p>
+      Davetin geri kalanında parlamak isteyen
+      misafirlerimiz, standımızdan ayrıca
+      yararlanabilir.
+    </p>
+  </div>
+
+</div>
 
 
 
@@ -1512,6 +1501,131 @@ Hizmetleri Gör
 <style>
 
 /* PAKETLER */
+
+/* =========================================
+   MİNİ PAKET - DÜZENLEME
+========================================= */
+
+.package-card{
+  position:relative;
+  overflow:hidden;
+}
+
+
+/* Özellikler */
+
+.package-features{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:28px;
+}
+
+.package-feature{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+
+  padding:13px 15px;
+
+  border-radius:14px;
+
+  background:rgba(255,255,255,.045);
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.package-feature > span{
+  flex-shrink:0;
+
+  width:23px;
+  height:23px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:rgba(242,209,138,.14);
+
+  color:#f2d18a;
+
+  font-size:13px;
+  font-weight:800;
+}
+
+.package-feature p{
+  margin:0;
+
+  color:rgba(255,255,255,.78);
+
+  font-size:13px;
+  line-height:1.5;
+}
+
+
+/* =========================================
+   EK BİLGİ ALANI
+========================================= */
+
+.package-info{
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:12px;
+
+  margin-top:20px;
+
+  padding:16px 17px;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(242,209,138,.10),
+      rgba(242,209,138,.035)
+    );
+
+  border:1px solid rgba(242,209,138,.16);
+}
+
+.info-icon{
+  flex-shrink:0;
+
+  font-size:15px;
+
+  margin-top:1px;
+}
+
+.package-info p{
+  margin:0;
+
+  color:rgba(255,255,255,.58);
+
+  font-size:12px;
+
+  line-height:1.6;
+}
+
+
+/* =========================================
+   MOBİL
+========================================= */
+
+@media(max-width:650px){
+
+  .package-feature{
+    padding:12px 13px;
+  }
+
+  .package-info{
+    padding:14px;
+  }
+
+}
 
 .packages-section {
   padding: 100px 0;
