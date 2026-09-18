@@ -2366,42 +2366,369 @@ Hizmetleri Gör
 
 
 
-<!-- GALERİ -->
 
+<!-- GALERİ -->
 <section id="galeri">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-head">
+        <div class="section-head">
+            <small>Galeri</small>
+            <h2>Referans ve Çalışmalar</h2>
+            <p>
+                Gerçekleştirdiğimiz kına ve düğün organizasyonlarından
+                seçtiğimiz çalışmalar.
+            </p>
+        </div>
 
-<small>Galeri</small>
+        <div class="gallery">
 
-<h2>
-Referans ve Çalışmalar
-</h2>
+            <div class="gallery-item gallery-large">
+                <img src="galeri1.jpeg" alt="Nejla Henna Organizasyon">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri2.jpeg" alt="Hint kınası uygulaması">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri3.jpeg" alt="Kına organizasyonu">
+            </div>
+
+            <div class="gallery-item gallery-tall">
+                <img src="galeri4.jpeg" alt="Kına gecesi organizasyonu">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri5.jpeg" alt="Glitter uygulaması">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri6.jpeg" alt="Yüz taşı uygulaması">
+            </div>
+
+            <div class="gallery-item gallery-wide">
+                <img src="galeri7.jpeg" alt="Hint kınası">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri8.jpeg" alt="Kına gecesi">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri9.jpeg" alt="Henna uygulaması">
+            </div>
+
+            <div class="gallery-item gallery-wide">
+                <img src="galeri10.jpeg" alt="Kına organizasyonu">
+            </div>
+
+            <div class="gallery-item">
+                <img src="galeri11.jpeg" alt="Nejla Henna">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALERİ LIGHTBOX -->
+<div class="gallery-lightbox" id="galleryLightbox">
+
+    <button class="lightbox-close" id="lightboxClose">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button class="lightbox-prev" id="lightboxPrev">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <img id="lightboxImage" src="" alt="Galeri">
+
+    <button class="lightbox-next" id="lightboxNext">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="lightbox-counter" id="lightboxCounter">
+        1 / 11
+    </div>
 
 </div>
 
+<style>
 
-<div class="gallery">
+/* ================================
+   GALERİ
+================================ */
 
-<img
-src="https://images.unsplash.com/photo-1615980522878-a52f5fc93bd7?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RkFDRSUyMFNUT05FJTIwbWFrdXB8ZW58MHx8MHx8fDA%3D"
-alt="Yüz taşı uygulaması">
+#galeri {
+    padding: 100px 0;
+}
 
-<img
-src="https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SEVOTkF8ZW58MHx8MHx8fDA%3D"
-alt="Hint kınası">
+#galeri .section-head {
+    text-align: center;
+    margin-bottom: 45px;
+}
 
-<img
-src="https://plus.unsplash.com/premium_photo-1677110759074-e1d62f948f30?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R0xJVFRFUiUyMGZhY2V8ZW58MHx8MHx8fDA%3D"
-alt="Glitter uygulaması">
+#galeri .section-head p {
+    max-width: 650px;
+    margin: 15px auto 0;
+    opacity: .75;
+    line-height: 1.7;
+}
 
-<img
-src="https://images.unsplash.com/photo-1628834556809-fd4d8acad67c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEhFTk5BfGVufDB8fDB8fHww"
-alt="Henna uygulaması">
 
-</div>
+/* GALERİ GRID */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 220px;
+    gap: 15px;
+}
+
+
+/* FOTOĞRAF */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    cursor: pointer;
+    background: #111;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+
+/* FARKLI BOYUTLAR */
+
+.gallery-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-tall {
+    grid-row: span 2;
+}
+
+.gallery-wide {
+    grid-column: span 2;
+}
+
+
+/* HOVER */
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.45),
+        transparent 50%
+    );
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* GALERİ LIGHTBOX */
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.94);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+}
+
+.gallery-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gallery-lightbox img {
+    max-width: 88%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 20px 80px rgba(0,0,0,.7);
+}
+
+
+/* LIGHTBOX BUTONLARI */
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    border: 0;
+    background: rgba(255,255,255,.08);
+    color: #fff;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition: .25s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--gold2);
+    color: #000;
+}
+
+
+/* KAPAT */
+
+.lightbox-close {
+    top: 25px;
+    right: 30px;
+}
+
+
+/* SOL */
+
+.lightbox-prev {
+    left: 30px;
+}
+
+
+/* SAĞ */
+
+.lightbox-next {
+    right: 30px;
+}
+
+
+/* SAYAC */
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    background: rgba(0,0,0,.5);
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+
+/* MOBİL */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+    }
+
+    .gallery-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .gallery-wide {
+        grid-column: span 2;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #galeri {
+        padding: 70px 0;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+        gap: 9px;
+    }
+
+    .gallery-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .gallery-tall {
+        grid-row: span 2;
+    }
+
+    .gallery-wide {
+        grid-column: span 2;
+    }
+
+    .gallery-lightbox img {
+        max-width: 94%;
+        max-height: 78vh;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
+
+}
+</style>
+
 
 
 <!-- RÖPORTAJ -->
@@ -2741,6 +3068,149 @@ Not / Mekân / Kişi Sayısı: ${note || "Belirtilmedi"}`;
     );
 });
 
+
+</script>
+
+
+<script>
+
+const galleryImages = [
+    "galeri1.jpeg",
+    "galeri2.jpeg",
+    "galeri3.jpeg",
+    "galeri4.jpeg",
+    "galeri5.jpeg",
+    "galeri6.jpeg",
+    "galeri7.jpeg",
+    "galeri8.jpeg",
+    "galeri9.jpeg",
+    "galeri10.jpeg",
+    "galeri11.jpeg"
+];
+
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+const lightbox = document.getElementById("galleryLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.getElementById("lightboxClose");
+const lightboxPrev = document.getElementById("lightboxPrev");
+const lightboxNext = document.getElementById("lightboxNext");
+const lightboxCounter = document.getElementById("lightboxCounter");
+
+let currentImage = 0;
+
+
+/* FOTOĞRAFA TIKLAMA */
+
+galleryItems.forEach((item, index) => {
+
+    item.addEventListener("click", () => {
+
+        currentImage = index;
+
+        showImage();
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+/* FOTOĞRAF GÖSTER */
+
+function showImage() {
+
+    lightboxImage.src = galleryImages[currentImage];
+
+    lightboxCounter.textContent =
+        `${currentImage + 1} / ${galleryImages.length}`;
+
+}
+
+
+/* KAPAT */
+
+function closeLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* SONRAKİ */
+
+function nextImage() {
+
+    currentImage++;
+
+    if (currentImage >= galleryImages.length) {
+        currentImage = 0;
+    }
+
+    showImage();
+
+}
+
+
+/* ÖNCEKİ */
+
+function prevImage() {
+
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = galleryImages.length - 1;
+    }
+
+    showImage();
+
+}
+
+
+/* BUTONLAR */
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+lightboxNext.addEventListener("click", nextImage);
+
+lightboxPrev.addEventListener("click", prevImage);
+
+
+/* DIŞ ALANA TIKLAYINCA KAPAT */
+
+lightbox.addEventListener("click", (e) => {
+
+    if (e.target === lightbox) {
+        closeLightbox();
+    }
+
+});
+
+
+/* KLAVYE */
+
+document.addEventListener("keydown", (e) => {
+
+    if (!lightbox.classList.contains("active")) return;
+
+    if (e.key === "Escape") {
+        closeLightbox();
+    }
+
+    if (e.key === "ArrowRight") {
+        nextImage();
+    }
+
+    if (e.key === "ArrowLeft") {
+        prevImage();
+    }
+
+});
 
 </script>
 
